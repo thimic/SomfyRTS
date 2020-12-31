@@ -1,0 +1,16 @@
+{
+  "mqtt": {
+    "url": "192.168.86.240",
+    "port": 1883,
+    "username": "thimic",
+    "password": "warrant_strove_starve_dregs_system_vague",
+    "keepalive": 60,
+    "command_topic": "home/cover/set",
+    "program_topic": "home/cover/program"
+  },
+  "pigpio": {
+    "txgpio": 4,
+    "send_repeat": 2,
+    "rts_address": 2594336
+  }
+}

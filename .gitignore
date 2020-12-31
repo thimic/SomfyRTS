@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# JetBrains
+.idea/
+
+# OS dir configs
+.DS_Store
+thumbs.db

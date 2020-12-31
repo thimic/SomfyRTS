@@ -1,0 +1,44 @@
+{
+  "name": "Somfy RTS",
+  "version": "0.0.1",
+  "slug": "somfy_rts",
+  "description": "Addon for controlling Somfy covers using a GPIO radio emitter",
+  "arch": ["armhf", "armv7"],
+  "startup": "services",
+  "boot": "auto",
+  "options": {
+    "mqtt": {
+      "url": "localhost",
+      "port": 1883,
+      "username": "",
+      "password": "",
+      "keepalive": 60,
+      "command_topic": "home-assistant/cover/set",
+      "program_topic": "home-assistant/cover/program"
+    },
+    "pigpio": {
+      "txgpio": 4,
+      "send_repeat": 2,
+      "rts_address": 2594336
+    }
+  },
+  "schema": {
+    "mqtt": {
+      "url": "str",
+      "port": "int",
+      "username": "str",
+      "password": "str",
+      "keepalive": "int",
+      "command_topic": "str",
+      "program_topic": "str"
+    },
+    "pigpio": {
+      "txgpio": "int",
+      "send_repeat": "int",
+      "rts_address": "int"
+    }
+  },
+  "map": ["config:rw"],
+  "gpio": true,
+  "full_access": true
+}

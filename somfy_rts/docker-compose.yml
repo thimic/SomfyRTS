@@ -1,0 +1,12 @@
+version: "3"
+services:
+  somfy_rts:
+    image: somfy-rts:latest
+    container_name: somfy_rts
+    environment:
+      - PUID=1001
+      - PGID=1001
+    privileged: true
+    volumes: 
+      - ./data:/data
+    restart: unless-stopped
