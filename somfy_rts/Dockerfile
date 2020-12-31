@@ -24,7 +24,6 @@ RUN \
     wget https://github.com/joan2937/pigpio/archive/master.zip \
     && unzip master.zip \
     && cd pigpio-master \
-    && cat Makefile \
     && make \
     && make install
 RUN rm -rf master.zip && rm -rf pigpio-master
