@@ -14,9 +14,10 @@ RUN chmod a+x /run.sh
 # Set work dir
 WORKDIR /tmp
 
-# Install sh
+# Install dependencies
 RUN apk add --update alpine-sdk && apk update
 RUN apk add --update gcc && apk update
+RUN apk add --no-cache python3
 
 # Install pigpio
 RUN \
@@ -29,7 +30,6 @@ RUN \
 RUN rm -rf master.zip && rm -rf pigpio-master
 
 # Install Python
-RUN apk add --no-cache python3
 COPY requirements.txt .
 RUN python3 -m pip install -r requirements.txt
 
